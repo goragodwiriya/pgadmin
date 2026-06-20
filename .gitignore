@@ -1,0 +1,23 @@
+# Local overrides (copy from config.php)
+config.local.php
+
+# Dependencies
+/vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+/tmp/
+
+# Environment
+.env
+.env.*

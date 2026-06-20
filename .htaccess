@@ -1,0 +1,14 @@
+# Deny access to sensitive files and directories
+<FilesMatch "^(config\.php|config\.local\.php|bootstrap\.php|\.gitignore|\.env)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^classes/ - [F,L]
+    RewriteRule ^locale/ - [F,L]
+    RewriteRule ^tests/ - [F,L]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
